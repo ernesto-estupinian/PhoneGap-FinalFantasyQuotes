@@ -1,0 +1,280 @@
+/*body {
+margin: 0;
+}*/
+
+#theQuote {
+font-family: Verdana, Arial;
+font-size: 10px;
+font-weight: bold;
+text-align: center;
+color: #FFFFFF;
+text-shadow: black 2px 2px 0px;
+padidng:1rem;
+z-index:1001;
+
+/*Non selectable text*/
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+#theBackground {
+/*Position and size*/
+z-index:1000;
+width: 90%;
+position: fixed;
+top: 50%;
+left: 50%;
+-webkit-transform: translate(-50%, -50%);
+transform: translate(-50%, -50%);
+
+/*Background gradient*/
+background: #195cc2; /* Old browsers */
+background: -moz-linear-gradient(left,  #195cc2 0%, #182d6e 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,#195cc2), color-stop(100%,#182d6e)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left,  #195cc2 0%,#182d6e 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left,  #195cc2 0%,#182d6e 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left,  #195cc2 0%,#182d6e 100%); /* IE10+ */
+background: linear-gradient(to right,  #195cc2 0%,#182d6e 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#195cc2', endColorstr='#182d6e',GradientType=1 ); /* IE6-9 */
+
+/*Border and shadow*/
+-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,1);
+-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,1);
+box-shadow: 0px 0px 5px 0px rgba(0,0,0,1);
+border: 2px solid #FFF;
+border-radius: 10px;
+
+/*Transtions*/
+/*-webkit-transition: height 1s ease-out; /* For Safari 3.1 to 6.0 */
+/*transition: height 1s ease-out;*/
+}
+/*#theBackground:hover{
+	height: 20%;
+}*/
+
+
+/*Clouds background*/
+html,body {
+margin:0;
+/*height:100%*/
+}
+
+.sky {
+height:100%;
+background:#007fd5;
+position:relative;
+overflow:hidden;
+-webkit-animation:sky_background 50s ease-out infinite;
+-moz-animation:sky_background 50s ease-out infinite;
+-o-animation:sky_background 50s ease-out infinite;
+-webkit-transform:translate3d(0,0,0);
+-moz-transform:translate3d(0,0,0);
+-o-transform:translate3d(0,0,0)
+}
+
+
+.moon {
+background:url("http://montanaflynn.me/lab/css-clouds/images/moon.png");
+position:absolute;
+left:0;
+height:100%;
+width:300%;
+-webkit-animation:moon 50s linear infinite;
+-moz-animation:moon 50s linear infinite;
+-o-animation:moon 50s linear infinite;
+-webkit-transform:translate3d(0,0,0);
+-moz-transform:translate3d(0,0,0);
+-o-transform:translate3d(0,0,0)
+}
+
+
+.clouds_one {
+background:url("http://montanaflynn.me/lab/css-clouds/images/cloud_one.png");
+position:absolute;
+left:0;
+top:0;
+height:100%;
+width:300%;
+-webkit-animation:cloud_one 50s linear infinite;
+-moz-animation:cloud_one 50s linear infinite;
+-o-animation:cloud_one 50s linear infinite;
+-webkit-transform:translate3d(0,0,0);
+-moz-transform:translate3d(0,0,0);
+-o-transform:translate3d(0,0,0)
+}
+
+.clouds_two {
+background:url("http://montanaflynn.me/lab/css-clouds/images/cloud_two.png");
+position:absolute;
+left:0;
+top:0;
+height:100%;
+width:300%;
+-webkit-animation:cloud_two 75s linear infinite;
+-moz-animation:cloud_two 75s linear infinite;
+-o-animation:cloud_two 75s linear infinite;
+-webkit-transform:translate3d(0,0,0);
+-moz-transform:translate3d(0,0,0);
+-o-transform:translate3d(0,0,0)
+}
+
+.clouds_three {
+background:url("http://montanaflynn.me/lab/css-clouds/images/cloud_three.png");
+position:absolute;
+left:0;
+top:0;
+height:100%;
+width:300%;
+-webkit-animation:cloud_three 100s linear infinite;
+-moz-animation:cloud_three 100s linear infinite;
+-o-animation:cloud_three 100s linear infinite;
+-webkit-transform:translate3d(0,0,0);
+-moz-transform:translate3d(0,0,0);
+-o-transform:translate3d(0,0,0)
+}
+
+@-webkit-keyframes sky_background {
+0% {
+background:#007fd5;
+color:#007fd5
+}
+
+50% {
+background:#000;
+color:#a3d9ff
+}
+
+100% {
+background:#007fd5;
+color:#007fd5
+}
+}
+
+@-webkit-keyframes moon {
+0% {
+opacity: 0;
+left:-200%
+-moz-transform: scale(0.5);
+  -webkit-transform: scale(0.5);
+}
+
+50% {
+opacity: 1;
+-moz-transform: scale(1);
+left:0%
+bottom:250px;
+  -webkit-transform: scale(1);
+}
+
+100% {
+opacity: 0;
+bottom:500px;
+-moz-transform: scale(0.5);
+  -webkit-transform: scale(0.5);
+}
+}
+
+@-webkit-keyframes cloud_one {
+0% {
+left:0
+}
+
+100% {
+left:-200%
+}
+}
+
+@-webkit-keyframes cloud_two {
+0% {
+left:0
+}
+
+100% {
+left:-200%
+}
+}
+
+@-webkit-keyframes cloud_three {
+0% {
+left:0
+}
+
+100% {
+left:-200%
+}
+}
+
+@-moz-keyframes sky_background {
+0% {
+background:#007fd5;
+color:#007fd5
+}
+
+50% {
+background:#000;
+color:#a3d9ff
+}
+
+100% {
+background:#007fd5;
+color:#007fd5
+}
+}
+
+@-moz-keyframes moon {
+0% {
+opacity: 0;
+left:-200%
+-moz-transform: scale(0.5);
+  -webkit-transform: scale(0.5);
+}
+
+50% {
+opacity: 1;
+-moz-transform: scale(1);
+left:0%
+bottom:250px;
+  -webkit-transform: scale(1);
+}
+
+100% {
+opacity: 0;
+bottom:500px;
+-moz-transform: scale(0.5);
+  -webkit-transform: scale(0.5);
+}
+}
+
+@-moz-keyframes cloud_one {
+0% {
+left:0
+}
+
+100% {
+left:-200%
+}
+}
+
+@-moz-keyframes cloud_two {
+0% {
+left:0
+}
+
+100% {
+left:-200%
+}
+}
+
+@-moz-keyframes cloud_three {
+0% {
+left:0
+}
+
+100% {
+left:-200%
+}
+}
